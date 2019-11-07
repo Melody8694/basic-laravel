@@ -11,16 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'PagesController@getHome')->name('home');
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::get('/about', 'PagesController@getAbout')->name('about');
 
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/contact', 'PagesController@getContact')->name('contact');
 
 Route::post('/contact/submit', 'ContactController@submit')->name('contact-form-submit');
+
+Route::get('/contact/messages', 'ContactController@getMessages')->name('get-messages');

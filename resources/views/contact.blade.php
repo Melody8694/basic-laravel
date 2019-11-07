@@ -3,16 +3,6 @@
 @section("content")
     <h1>Contact us</h1>
 
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-
     <form method="post" action="{{route('contact-form-submit')}}">
 
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
