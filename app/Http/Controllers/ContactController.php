@@ -14,7 +14,7 @@ class ContactController extends Controller
         $message->subject = $request->input('subject');
         $message->message = $request->input('message');
         $message->save();
-        return redirect()->route("home")->with('success', 'Message submit success');
+        return redirect()->route("home")->with('success', 'Thanks for contact us');
 
     }
 
