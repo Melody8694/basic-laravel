@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DaiDV web site</title>
-    <link rel="stylesheet" href="/css/app.css">
-
+    <title>Home</title>
+    <link rel="stylesheet" href="{{url('/css/app.css')}}">
+    <meta name="csrf-token" content="{{csrf_token()}}" />
+    <script src="{{url('js/app.js')}}"></script>
 </head>
 <body>
 @include("includes.navbar")
@@ -22,8 +23,9 @@
             @include("includes.sidebar")
         </div>
     </div>
-
     <footer class="footer text-center">Copy right version 1.0</footer>
 </div>
+<script type="text/javascript">
+</script>
 </body>
 </html>

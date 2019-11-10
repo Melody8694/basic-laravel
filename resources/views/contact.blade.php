@@ -5,7 +5,7 @@
 
     <form method="post" action="{{route('contact-form-submit')}}">
 
-        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        {{ csrf_field() }}
 
         <div class="form-group">
             <label for="txt_name">Name</label>

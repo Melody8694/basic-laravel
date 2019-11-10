@@ -7,6 +7,6 @@
             <li><a href="{{route('contact')}}">Contact</a></li>
             <li><a href="{{route('about')}}">About</a></li>
             <li><a href="{{route('get-messages')}}">See messages</a></li>
-        </ul>N
+        </ul>
     </div>
 </nav>

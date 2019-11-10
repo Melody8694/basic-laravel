@@ -20,3 +20,5 @@ Route::get('/contact', 'PagesController@getContact')->name('contact');
 Route::post('/contact/submit', 'ContactController@submit')->name('contact-form-submit');
 
 Route::get('/contact/messages', 'ContactController@getMessages')->name('get-messages');
+
+Route::get('/companies', 'CompanyController@getCompanies')->name('get-companies');
