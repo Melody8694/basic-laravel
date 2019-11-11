@@ -21,4 +21,6 @@ Route::post('/contact/submit', 'ContactController@submit')->name('contact-form-s
 
 Route::get('/contact/messages', 'ContactController@getMessages')->name('get-messages');
 
+Route::post('/contact/ajaxRequest', 'ContactController@ajaxRequest')->name('ajax-post');
+
 Route::get('/companies', 'CompanyController@getCompanies')->name('get-companies');

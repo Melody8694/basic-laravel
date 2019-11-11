@@ -6,7 +6,6 @@
     <form method="post" action="{{route('contact-form-submit')}}">
 
         {{ csrf_field() }}
-
         <div class="form-group">
             <label for="txt_name">Name</label>
             <input type="text" class="form-control" id="txt_name" name="name" placeholder="Enter name">
@@ -26,4 +25,24 @@
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+    <button class="btn btn-danger" type="button" id="btn_ajax">Click me</button>
+
+    <script type="text/javascript">
+        $('#btn_ajax').on('click', function () {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+            $.ajax({
+                url: "{{url('/contact/ajaxRequest')}}",
+                method: "post",
+                data: {name : 'dai'},
+                success: function (result) {
+                    console.log(result);
+                }
+            });
+        });
+    </script>
 @endsection
